@@ -65,7 +65,7 @@ client.on('message', message => {
     if (message.content === "*help") {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("** Programmer bot :wrench: **","**@!     ThaWither#1360   **")
+      .addField("** Programmer bot :wrench: **","**@ThaWither#1360   **")
 .setColor('RANDOM')
    message.channel.sendEmbed(embed);
     }
@@ -83,11 +83,11 @@ client.on('message', message => {
 //,  , 
 client.on('guildMemberAdd', member => {
     // Send the message to a designated channel on a server:
-    const channel = member.guild.channels.find('name', 'welcome');
+    const channel = member.guild.channels.find('name', '🙌🏽-welcome');
     // Do nothing if the channel wasn't found on this server
     if (!channel) return;
     // Send the message, mentioning the member
-    channel.send(`**Welcome**, ${member} , **to the ExibelMC Discord!** `);
+    channel.send(`**Welcome**, ${member} , **GameSquad Server Have a Good Stay and Make sure to Invite your friends here :ok_hand:** `);
   });
 //Welcome @Quack to Exibel I $3,500 F TOP! Make sure to Invite your friends here :ok_hand: 
 client.on('message', message => {
@@ -164,7 +164,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "Messages successfully cleared",
         footer: {
-          text: "Discord.js Bot"
+          text: "ThaWither#1360"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -206,7 +206,7 @@ if(message.content.split(' ')[0] == '*bc') {
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("Account information")
-               .setFooter(`Desert Bot.`, '')
+               .setFooter(`ThaWither#1360`, '')
   .setColor("#9B59B6")
   .addField("Account Name", `${message.author.username}`)
   .addField('Private Account Code', message.author.discriminator)
@@ -245,8 +245,8 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : ThaWither ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setActivity("Exibel MC")
-client.user.setStatus("Online")
+client.user.setActivity("GameSquad Offical Bot")
+client.user.setStatus("idle")
 });
 client.on("guildCreate", guild => {
   console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
