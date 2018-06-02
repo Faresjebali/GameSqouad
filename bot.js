@@ -87,7 +87,7 @@ client.on('guildMemberAdd', member => {
     // Do nothing if the channel wasn't found on this server
     if (!channel) return;
     // Send the message, mentioning the member
-    channel.send(`**Welcome**, ${member} , **GameSquad Server Have a Good Stay and Make sure to Invite your friends here :ok_hand:** `);
+    channel.send(`**Welcome**, ${member} , ** to GameSquad Server Have a Good Stay and Make sure to Invite your friends here :ok_hand:** `);
   });
 //Welcome @Quack to Exibel I $3,500 F TOP! Make sure to Invite your friends here :ok_hand: 
 client.on('message', message => {
@@ -278,31 +278,7 @@ const secreT = [
   console.log('[id] Send By: ' + message.author.username)
     }
 });
-client.on('message', message => {
-   if (message.content.startsWith("id")) {
-                if(!message.channel.guild) return message.reply('** This command only for servers**');
 
-               var mentionned = message.mentions.users.first();
-    var mentionavatar;
-      if(mentionned){
-          var mentionavatar = mentionned;
-      } else {
-          var mentionavatar = message.author;
-          
-      }
-   let embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-   .setThumbnail(`${mentionavatar.avatarURL}`)
-  .addField("Name:",`<@` + `${mentionavatar.id}` + `>`, true)
-  .addField('Discrim:',"#" +  `${mentionavatar.discriminator}`, true)
-   .addField("ID:", "**[" + `${mentionavatar.id}` + "]**", true)
-  .addField("Create At:", "**[" + `${mentionavatar.createdAt}` + "]**", true)
-     
-     
-  message.channel.sendEmbed(embed);
-  console.log('[id] Send By: ' + message.author.username)
-    }
-});
 //
 client.on('message', message => {
     if (message.content.startsWith("*avatar")) {
