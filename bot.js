@@ -237,6 +237,14 @@ client.on('message', message => {
   .setTimestamp()
 message.channel.sendEmbed(embed);
     }
+   if(blacklisted.some(words => message.content.toLowerCase().includes(words))){
+   if(message.member.hasPermission("MANAGE_GUILD")){
+      return;
+} else {
+        message.reply("No posting advertisement!");
+           message.delete();
+       }
+    };
 });
 client.on('ready', () => {
    console.log(`----------------`);
@@ -310,14 +318,7 @@ client.on('message', function(message) {
         }
     }
 });
-if(blacklisted.some(words => message.content.toLowerCase().includes(words))){
-   if(message.member.hasPermission("MANAGE_GUILD")){
-      return;
-} else {
-        message.reply("No posting advertisement!");
-           message.delete();
-       }
-    };
+
 
 
 
