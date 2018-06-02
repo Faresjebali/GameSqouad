@@ -317,7 +317,7 @@ if(blacklisted.some(words => message.content.toLowerCase().includes(words))){
         message.reply("No posting advertisement!");
            message.delete();
        }
-    });
+    };
 
 
 
