@@ -9,8 +9,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === "*help") {
-let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)    
+let embed = new Discord.RichEmbed()    
       .addField("**:globe_with_meridians: General commands**","** **")
       .addField("***ping :stopwatch:**","** Speed your connection**")
       .addField("***id :chart_with_downwards_trend:**","**View the speed of the bot connection**")
@@ -54,7 +53,7 @@ client.on('message', message => {
     if (message.author.bot) return;
     if(message.content == '*member') {
     const embed = new Discord.RichEmbed()
-    .addField(`Status of members 🔋`,'-',   true)
+    .setDescription("Status of members :battery:")
 .addField(`💚 Online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}`,'-',   true)
 .addField(`❤ DND:     ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`,'-',   true)
 .addField(`💛 Idle:      ${message.guild.members.filter(m=>m.presence.status == 'idle').size}`,'-',   true)   
