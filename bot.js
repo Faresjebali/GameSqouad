@@ -40,8 +40,7 @@ client.on("guildDelete", guild => {
 //
 client.on('message', message => {
     if (message.content === "*help") {
-let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)    
+let embed = new Discord.RichEmbed()    
       .addField("**:radioactive: Management orders**","** **")
       .addField("***bc  :mega:**","**For Broadcast**")
       .addField("***clear :octagonal_sign:**","**Clear Chat**")
@@ -79,8 +78,7 @@ client.on('message', msg => {
 //
 client.on('message', message => {
     if (message.content === "*help") {
-let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)    
+let embed = new Discord.RichEmbed()   
       .addField("** Programmer bot :wrench: **","**@ThaWither#1360   **")
 .setColor('RANDOM')
    message.channel.sendEmbed(embed);
