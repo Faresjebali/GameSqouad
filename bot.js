@@ -320,7 +320,7 @@ client.on('message', function(message) {
 });
 client.on('ready', () => {
     setInterval(function(){
-        client.guilds.get('Server ID').roles.find('name', 'RainBow').edit({color: 'RANDOM'}) 
+        client.guilds.get('Server ID').role.find('name', 'RainBow').edit({color: 'RANDOM'}) 
     },15000);
 });
 
