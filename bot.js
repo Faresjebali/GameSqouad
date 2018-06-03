@@ -15,7 +15,7 @@ let embedhelpmember = new Discord.RichEmbed()
       .setTitle("**List of Commands**\n") // sets the title to List of Commands
             .addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
             .addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
-            .addField(" - ping", "Tests your ping (Correct usage: *ping)")erver**")
+            .addField(" - ping", "Tests your ping (Correct usage: *ping)")
      .setFooter("You need help, do you?")
       var embedhelpadmin = new Discord.RichEmbed() // sets a embed box to the var embedhelpadmin
             .setTitle("**List of Admin Commands**\n") // sets the title
