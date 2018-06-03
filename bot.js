@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+cconst Discord = require('discord.js');
 const client = new Discord.Client();
 var blacklisted = ["discord.gg", "discord.gg/", "https://discord.gg"];
 
@@ -134,7 +134,18 @@ client.on('message', message => {
     let args = message.content.split(" ").slice(1);
 
 
-   
+    if (command == "embed") {
+        if (!message.channel.guild) return message.reply('** This command only for servers **');
+        let say = new Discord.RichEmbed()
+            .addField('Emebad:', `${message.author.username}#${message.author.discriminator}`)
+            .setDescription(args.join("  "))
+            .setColor(0x23b2d6)
+        message.channel.sendEmbed(say);
+        message.delete();
+    }
+
+
+});
 var prefix = "*";
 client.on('message', message => {
     if (message.content.startsWith(prefix + "say")) {
@@ -268,16 +279,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-if(message.content.startsWith(prefix + 'info')) {
-        let bicon = bot.user.displayAvatarURL
+if(message.content.startsWith(prefix + 'bot')) {
         const embed = new Discord.RichEmbed()
-            setColor("#15f153")
-    .setThumbnail(bicon)
-    .addField("Bot Name:", bot.user.username)
-    .addField("Created at:","**Thu May 17 2018**")
-	.addField("Server Owner:","**BarisE#5634**")
-	.addField("Server Owner:","**ThaWither#1360**")
-    .addField("Bot Founder:","**ThaWither#1360**" );
+            .setColor("#00FFFF")
+            .setDescription(`**Servers**🌐 **__${client.guilds.size}__**
+**Users**👥 **__${client.users.size}__**
+**Channels**📚 **__${client.channels.size}__** `)
         message.channel.sendEmbed(embed);
     }
 
@@ -323,6 +330,37 @@ const secreT = [
     }
 });
 
+//
+client.on('message', message => {
+    if (message.content.startsWith("*avatar")) {
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var x5bzm = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setImage(`${x5bzm.avatarURL}`)
+      message.channel.sendEmbed(embed);
+    }
+})
+client.on('message', function(message) {
+    if(message.content.startsWith(prefix + 'roll')) {
+        let args = message.content.split(" ").slice(1);
+        if (!args[0]) {
+            message.channel.send('**Subtract a certain number from which to withdraw**');
+            return;
+            }
+    message.channel.send(Math.floor(Math.random() * args.join(' ')));
+            if (!args[0]) {
+          message.edit('1')
+          return;
+        }
+    }
+});
 
 
 
