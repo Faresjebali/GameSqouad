@@ -17,6 +17,7 @@ client.on('message', message => {
             .addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
             .addField(" - ping", "Tests your ping (Correct usage: *ping)")
             .addField(" - avatar","It will get your Discord Picture")
+            .addField(" -acc","Get Your Account information")
      .setFooter("ThaWither#1360") // sets a embed box to the var embedhelpadmin
  var embedhelpadmin = new Discord.RichEmbed()
             .setTitle("**List of Admin Commands**\n") // sets the title
@@ -252,7 +253,7 @@ if(message.content.split(' ')[0] == '*bc') {
     }
 })
     client.on('message', message => {
-     if (message.content === "*id") {
+     if (message.content === "*acc") {
      let embed = new Discord.RichEmbed()
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
