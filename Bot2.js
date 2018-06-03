@@ -15,7 +15,6 @@ var eightball = [ // sets the answers to an eightball
 ]
 
 var bot = new Discord.Client(); // sets Discord.Client to bot
-
 client.on("ready", function() { // when the bot starts up, set its game to Use *help and tell the console "Booted up!"
     bot.user.setGame("Use *info") // sets the game the bot is playing
     console.log("Booted up!") // messages the console Booted up!
