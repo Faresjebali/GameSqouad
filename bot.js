@@ -26,8 +26,6 @@ let embedhelpmember = new Discord.RichEmbed()
             .addField("- bc ","For Broadcast all your Server")
             .addField(" -clear","Clear Chat")    
   message.channel.send(embedhelpmember); // sends the embed box "embedhelpmember" to the chatif
-        if(message.member.roles.some(r=>["🔨StaffSquad🔨"].includes(r.name)) ) return message.channel.send(embedhelpadmin);
-  message.channel.sendEmbed(embed);
     }
 });
 client.on("guildDelete", guild => {
