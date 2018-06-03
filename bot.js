@@ -318,12 +318,17 @@ client.on('message', function(message) {
         }
     }
 });
-client.on('ready', () => {
-    setInterval(function(){
-        client.guilds.get('Server ID').role.find('name', 'RainBow').edit({color: 'RANDOM'}) 
-    },15000);
-});
+client.on('message', message => {
+if(message.content.startsWith(prefix + 'bot')) {
+        const embed = new Discord.RichEmbed()
+            .setColor("#00FFFF")
+            .setDescription(`**Servers**🌐 **__${client.guilds.size}__**
+**Users**👥 **__${client.users.size}__**
+**Channels**📚 **__${client.channels.size}__** `)
+        message.channel.sendEmbed(embed);
+    }
 
+});
 
 
 
