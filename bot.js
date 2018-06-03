@@ -45,7 +45,7 @@ client.on("guildDelete", guild => {
     .then(user => {user.send(embed)});
   });
 //
-c
+
 client.on('message', message => {
     if (message.author.bot) return;
     if(message.content == '*member') {
