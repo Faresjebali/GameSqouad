@@ -91,14 +91,20 @@ client.on('guildMemberAdd', member => {
   });
 //Welcome @Quack to Exibel I $3,500 F TOP! Make sure to Invite your friends here :ok_hand: 
 client.on('message', message => {
-if (message.content.startsWith('*ping')) {
-           if(!message.channel.guild) return;
-
-if (message.author.bot) return;
-    message.channel.sendMessage(`**Pong ! :** \`${Date.now() - message.createdTimestamp} ms\``);
-    }
-
-});
+                                if(!message.channel.guild) return;
+                        if (message.content.startsWith('*ping')) {
+                            if(!message.channel.guild) return;
+                            var msg = `${Date.now() - message.createdTimestamp}`
+                            var api = `${Math.round(client.ping)}`
+                            if (message.author.bot) return;
+                        let embed = new Discord.RichEmbed()
+                        .setAuthor(message.author.username,message.author.avatarURL)
+                        .setColor('RANDOM')
+                        .addField('**Time Taken:**',msg + " ms 📶 ")
+                        .addField('**WebSocket:**',api + " ms 📶 ")
+         message.channel.send({embed:embed});
+                        }
+                    });
 var prefix = "*";
 
 client.on('message', message => {
@@ -273,7 +279,7 @@ client.on('ready', () => {
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setActivity("GameSquad Offical Bot")
-client.user.setStatus("idle")
+client.user.setStatus("online")
 });
 client.on("guildCreate", guild => {
   console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
