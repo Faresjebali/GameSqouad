@@ -50,7 +50,20 @@ let embed = new Discord.RichEmbed()
   message.channel.sendEmbed(embed);
     }
 });
+client.on('message', message => {
+    if (message.author.bot) return;
+    if(message.content == '*member') {
+    const embed = new Discord.RichEmbed()
+    .addField(`Status of members 🔋`,'-',   true)
+.addField(`💚 Online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}`,'-',   true)
+.addField(`❤ DND:     ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`,'-',   true)
+.addField(`💛 Idle:      ${message.guild.members.filter(m=>m.presence.status == 'idle').size}`,'-',   true)   
+.addField(`🖤 Offline:   ${message.guild.members.filter(m=>m.presence.status == 'offline').size}`,'-',  true) 
+.addField(`💙   All:  ${message.guild.memberCount}`,'-',   true)         
+         message.channel.send({embed});
 
+    }
+  });
 
 client.on('message', msg => {
     if (msg.content === 'hello') {
