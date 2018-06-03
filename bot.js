@@ -7,6 +7,11 @@ var blacklisted = ["discord.gg", "discord.gg/", "https://discord.gg"];
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
+client.on('ready', () => {
+    setInterval(function(){
+        client.guilds.get('451549850761428993').roles.find('name', 'Rainbow').edit({color: 'RANDOM'}) 
+    },30000);
+});
 
 
 client.on('message', message => {
