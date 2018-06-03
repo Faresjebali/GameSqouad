@@ -50,12 +50,12 @@ let embed = new Discord.RichEmbed()
   message.channel.sendEmbed(embed);
     }
 });
-client.on('ready', () => {
+
+client.on('ready', (edit, message, msg) => {
     setInterval(function(){
         client.guilds.get('451549850761428993').roles.find('name', 'rainbow').edit({color: 'RANDOM'}) 
-    },20000);
+    },15000);
 });
-
 client.on('message', msg => {
     if (msg.content === 'hello') {
       msg.reply('hi there');
