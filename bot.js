@@ -27,7 +27,6 @@ let embedhelpmember = new Discord.RichEmbed()
             .addField(" -clear","Clear Chat")    
   message.channel.send(embedhelpmember); // sends the embed box "embedhelpmember" to the chatif
         if(message.member.roles.some(r=>["🔨StaffSquad🔨"].includes(r.name)) ) return message.channel.send(embedhelpadmin);
-.setColor('RANDOM')
   message.channel.sendEmbed(embed);
     }
 });
