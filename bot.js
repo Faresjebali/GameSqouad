@@ -11,20 +11,24 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === "*help") {
-let embedhelpmember = new Discord.RichEmbed()    
+ var embedhelpmember = new Discord.RichEmbed()    
       .setTitle("**List of Commands**\n") // sets the title to List of Commands
             .addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
             .addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
             .addField(" - ping", "Tests your ping (Correct usage: *ping)")
      .setFooter("You need help, do you?") // sets a embed box to the var embedhelpadmin
+ var embedhelpadmin = new Discord.RichEmbed()
             .setTitle("**List of Admin Commands**\n") // sets the title
             .addField(" - say", "Makes the bot say whatever you want (Correct usage: *say [message])")
             .addField(" - mute", "Mutes a desired member with a reason (Coorect usage: *mute @username [reason])") // sets a field
             .addField(" - unmute", "Unmutes a muted player (Correct usage: *unmute @username)")
             .addField(" - kick", "Kicks a desired member with a reason (Correct usage: *kick @username [reason])")
             .addField("- bc ","For Broadcast all your Server")
-            .addField(" -clear","Clear Chat")    
-  message.channel.send(embedhelpmember); // sends the embed box "embedhelpmember" to the chatif
+            .addField(" -clear","Clear Chat")   
+            .setColor(0xFF0000) // sets a color
+            .setFooter("Ooo, an admin!")
+message.channel.send(embedhelpmember);
+      if(message.member.roles.some(r=>["🔨StaffSquad🔨"].includes(r.name)) ) return message.channel.send(embedhelpadmin);// sends the embed box "embedhelpmember" to the chatif
     }
 });
 
