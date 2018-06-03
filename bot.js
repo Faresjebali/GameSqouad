@@ -18,6 +18,7 @@ let embed = new Discord.RichEmbed()
       .addField("***roll :1234:**","**Lots of 1 - 100**")
       .addField("***server :recycle:**","**For server information**")
       .addField("***roles :medal: **","**Clear chat conversations**")
+      .addField("***Member :battery:**,"**Show Status of members on your server")
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);
     }
