@@ -253,23 +253,15 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-     if (message.content === "*bot") {
-     let embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField("**Servers:**" , client.guilds.size)
-  .addField("**Users:**", client.users.size)
-  .addField("**channels:**", client.channels.size)
-  .setTimestamp()
-message.channel.sendEmbed(embed);
+if(message.content.startsWith(prefix + 'bot')) {
+        const embed = new Discord.RichEmbed()
+            .setColor("#00FFFF")
+            .setDescription(`**Servers**🌐 **__${client.guilds.size}__**
+**Users**👥 **__${client.users.size}__**
+**Channels**📚 **__${client.channels.size}__** `)
+        message.channel.sendEmbed(embed);
     }
-   if(blacklisted.some(words => message.content.toLowerCase().includes(words))){
-   if(message.member.hasPermission("MANAGE_GUILD")){
-      return;
-} else {
-        message.reply("No posting advertisement!");
-           message.delete();
-       }
-    };
+
 });
 client.on('ready', () => {
    console.log(`----------------`);
