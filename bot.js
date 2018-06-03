@@ -335,25 +335,6 @@ client.on('message', function(message) {
         }
     }
 });
-client.on('message', message => { 
-        if (message.content.startsWith("*warn")) {
-           if(!message.member.hasPermission('MUTE_MEMBER')) return message.channel.send('**Unfortunately you do not have permission**' );
-    var mention = message.mentions.members.first();
-    if(!mention) return message.channel.send("mention person");
-           let args = message.content.split(" ").slice(1);
-          if (!message.mentions.members.first()) return message.reply('')
-          if (!args[1]) return message.reply('``Reason ``') 
-          if (message.guild.channels.find('name', '🛂-global-warns')) { 
-            message.guild.channels.find('name', 'warns').send(` 
-          An alert was given : ${message.mentions.members.first()}
-          Because you did the following
-          ${args.join(" ").split(message.mentions.members.first()).slice(' ')}
-          `)
-          }
-        }
-});
-
-
 
 
 
