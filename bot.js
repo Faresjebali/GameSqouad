@@ -279,12 +279,17 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-if(message.content.startsWith(prefix + 'bot')) {
-        const embed = new Discord.RichEmbed()
-            .setColor("#00FFFF")
-            .setDescription(`**Servers**🌐 **__${client.guilds.size}__**
-**Users**👥 **__${client.users.size}__**
-**Channels**📚 **__${client.channels.size}__** `)
+if(message.content.startsWith(prefix + 'info')) {
+        let bicon = bot.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setColor("#15f153")
+    .setThumbnail(bicon)
+    .addField("Bot Name:", bot.user.username)
+    .addField("Created at:","**Thu May 17 2018**")
+	.addField("Server Owner:","**BarisE#5634**")
+	.addField("Server Owner:","**ThaWither#1360**")
+    .addField("Botᴰᵉᵛ:","**ThaWither#1360**" )
+    .addField("Support us:","https://www.paypal.me/ThaWither");
         message.channel.sendEmbed(embed);
     }
 
