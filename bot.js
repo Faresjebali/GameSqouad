@@ -142,7 +142,7 @@ client.on('message', message => {
 });
 var prefix = "*";
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "test")) {
+    if (message.content.startsWith(prefix + "say")) {
 
         let args = message.content.split(" ").slice(1)
         let text = args.join(' ').replace('$userid', message.author.id).replace('server-name', message.guild.name)
