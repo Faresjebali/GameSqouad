@@ -31,7 +31,8 @@ client.on('message', message => {
             .addField(" - unmute", "Unmutes a muted player (Correct usage: *unmute @username)")
             .addField(" - kick", "Kicks a desired member with a reason (Correct usage: *kick @username [reason])")
             .addField("- bc ","For Broadcast all your Server")
-            .addField(" -clear","Clear Chat")   
+            .addField(" -clear","Clear Chat")  
+            .addField(" -staffsquad","Special For New Recruitments")
             .setColor(0xFF0000) // sets a color
             .setFooter("Ooo, an admin!")
 message.channel.send(embedhelpmember);
