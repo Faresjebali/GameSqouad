@@ -17,7 +17,7 @@ client.on('message', message => {
             .addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
             .addField(" - ping", "Tests your ping (Correct usage: *ping)")
             .addField(" - avatar","It will get your Discord Picture")
-     .setFooter("You need help, do you?") // sets a embed box to the var embedhelpadmin
+     .setFooter("ThaWither#1360") // sets a embed box to the var embedhelpadmin
  var embedhelpadmin = new Discord.RichEmbed()
             .setTitle("**List of Admin Commands**\n") // sets the title
             .addField(" - say", "Makes the bot say whatever you want (Correct usage: *say [message])")
@@ -286,11 +286,11 @@ if(message.content.startsWith(prefix + 'info')) {
     .setThumbnail(bicon)
     .addField("Bot Name:", client.user.username)
     .addField("Created at:","**Thu May 17 2018**")
-	.addField("Server Owner:","**BarisE#5634**")
+     .addField("Server Owner:","**BarisE#5634**")
 	.addField("Server Owner:","**ThaWither#1360**")
     .addField("Botᴰᵉᵛ:","**ThaWither#1360**" )
     .addField("Support us:","https://www.paypal.me/ThaWither");
-        message.channel.sendEmbed(embed);
+        message.channel.sendEmbed(botembed);
     }
 
 });
