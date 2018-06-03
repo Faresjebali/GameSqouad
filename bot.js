@@ -7,14 +7,7 @@ const PREFIX = "*"
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-client.on("message", function(message) { // when a message is sent
-    if (message.author.equals(bot.user)) return; // if the message is sent by a bot, ignore
 
-    if (!message.content.startsWith(PREFIX)) return; // if the message doesn't contain PREFIX (*), then ignore
-
-    var args = message.content.substring(PREFIX.length).split(" "); // removes the prefix from the message
-    var command = args[0].toLowerCase(); // sets the command to lowercase (making it incase sensitive)
-    var mutedrole = message.guild.roles.find("name", "muted");
 
 client.on('message', message => {
     if (message.content === "*help") {
