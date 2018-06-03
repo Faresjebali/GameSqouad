@@ -84,13 +84,14 @@ client.on('message', message => {
 });
 //,  , 
 client.on('guildMemberAdd', member => {
-    // Send the message to a designated channel on a server:
     const channel = member.guild.channels.find('name', '🙌🏽-welcome');
-    // Do nothing if the channel wasn't found on this server
     if (!channel) return;
-    // Send the message, mentioning the member
     channel.send(`**Welcome**, ${member} , ** to GameSquad Server Have a Good Stay and Make sure to Invite your friends here :ok_hand:** `);
   });
+client.on('message', (message) => {
+  const guildMember = message.member;
+  guildMember.addRole('member');
+});
 //Welcome @Quack to Exibel I $3,500 F TOP! Make sure to Invite your friends here :ok_hand: 
 client.on('message', message => {
                                 if(!message.channel.guild) return;
