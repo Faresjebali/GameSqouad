@@ -11,15 +11,22 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === "*help") {
-let embed = new Discord.RichEmbed()    
-      .addField("**:globe_with_meridians: General commands**","** **")
-      .addField("***ping :stopwatch:**","** Speed your connection**")
-      .addField("***id :chart_with_downwards_trend:**","**View the speed of the bot connection**")
-      .addField("***avatar :camping:**","** Pictures of the chosen person**")
-      .addField("***roll :1234:**","**Lots of 1 - 100**")
-      .addField("***server :recycle:**","**For server information**")
-      .addField("***roles :medal: **","**Clear chat conversations**")
-      .addField("***Member :battery: **","**Status of members on your server**")
+let embedhelpmember = new Discord.RichEmbed()    
+      .setTitle("**List of Commands**\n") // sets the title to List of Commands
+            .addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
+            .addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
+            .addField(" - ping", "Tests your ping (Correct usage: *ping)")erver**")
+     .setFooter("You need help, do you?")
+      var embedhelpadmin = new Discord.RichEmbed() // sets a embed box to the var embedhelpadmin
+            .setTitle("**List of Admin Commands**\n") // sets the title
+            .addField(" - say", "Makes the bot say whatever you want (Correct usage: *say [message])")
+            .addField(" - mute", "Mutes a desired member with a reason (Coorect usage: *mute @username [reason])") // sets a field
+            .addField(" - unmute", "Unmutes a muted player (Correct usage: *unmute @username)")
+            .addField(" - kick", "Kicks a desired member with a reason (Correct usage: *kick @username [reason])")
+            .addField("- bc ","For Broadcast all your Server")
+            .addField(" -clear","Clear Chat")    
+  message.channel.send(embedhelpmember); // sends the embed box "embedhelpmember" to the chatif
+        if(message.member.roles.some(r=>["🔨StaffSquad🔨"].includes(r.name)) ) return message.channel.send(embedhelpadmin);
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);
     }
@@ -39,18 +46,7 @@ client.on("guildDelete", guild => {
     .then(user => {user.send(embed)});
   });
 //
-client.on('message', message => {
-    if (message.content === "*help") {
-let embed = new Discord.RichEmbed()    
-      .addField("**:radioactive: Management orders**","** **")
-      .addField("***bc  :mega:**","**For Broadcast**")
-      .addField("***clear :octagonal_sign:**","**Clear Chat**")
-      .addField("***kick  :outbox_tray:**","**Expulsion**")
-      .addField("***ban  :no_entry:**","**Ban members**")
-.setColor('RANDOM')
-  message.channel.sendEmbed(embed);
-    }
-});
+c
 client.on('message', message => {
     if (message.author.bot) return;
     if(message.content == '*member') {
