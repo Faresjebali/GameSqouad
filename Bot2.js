@@ -1,4 +1,5 @@
-const Discord = require("discord.js"); // use discord.js
+cconst Discord = require('discord.js');
+const client = new Discord.Client();
 
 const BOT_TOKEN = "NDUyMzEwMDUwNjAyNzQ1ODU4.DfOebw.LRgLqyrjEV8BGIm24IU7_pcqCQk)" // bot's token
 const PREFIX = "*" // bot's prefix
@@ -13,8 +14,7 @@ var eightball = [ // sets the answers to an eightball
     "you can try...",
     "up to you!",
 ]
-
-var bot = new Discord.Client(); // sets Discord.Client to bot
+// sets Discord.Client to bot
 client.on("ready", function() { // when the bot starts up, set its game to Use *help and tell the console "Booted up!"
     bot.user.setGame("Use *info") // sets the game the bot is playing
     console.log("Booted up!") // messages the console Booted up!
