@@ -16,6 +16,7 @@ client.on('message', message => {
             .addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
             .addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
             .addField(" - ping", "Tests your ping (Correct usage: *ping)")
+            .addField(" - avatar","It will get your Discord Picture")
      .setFooter("You need help, do you?") // sets a embed box to the var embedhelpadmin
  var embedhelpadmin = new Discord.RichEmbed()
             .setTitle("**List of Admin Commands**\n") // sets the title
@@ -338,7 +339,7 @@ client.on('message', message => {
         .setImage(`${x5bzm.avatarURL}`)
       message.channel.sendEmbed(embed);
     }
-});
+})
 
 
 
