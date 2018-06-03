@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('ready', () => {
     setInterval(function(){
         client.guilds.get('452242905969590283').roles.find('name', 'RainBow').edit({color: 'RANDOM'}) 
-    },12000);
+    },5000);
 });
 
 
