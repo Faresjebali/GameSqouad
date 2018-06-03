@@ -9,8 +9,8 @@ client.on('ready', () => {
 });
 client.on('ready', () => {
     setInterval(function(){
-        client.guilds.get('451549850761428993').roles.find('name', 'Rainbow').edit({color: 'RANDOM'}) 
-    },20000);
+        client.guilds.get('452242905969590283').roles.find('name', 'RainBow').edit({color: 'RANDOM'}) 
+    },15000);
 });
 
 
