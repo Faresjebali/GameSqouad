@@ -28,11 +28,7 @@ let embedhelpmember = new Discord.RichEmbed()
   message.channel.send(embedhelpmember); // sends the embed box "embedhelpmember" to the chatif
     }
 });
-client.on('ready', () => {
-    setInterval(function(){
-        client.guilds.get('451549850761428993').roles.find('name', 'Rainbow').edit({color: 'RANDOM'}) 
-    },25000);
-});
+
 client.on("guildDelete", guild => {
     let str = "<@!Owner ID>";
     let id = str.replace(/[<@!>]/g, '');
