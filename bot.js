@@ -74,14 +74,7 @@ client.on('message', msg => {
       msg.reply('hi there');
     }
   });
-client.on('message', message => {
-    if (message.content.startsWith(("*say")) {
 
-        let args = message.content.split(" ").slice(1)
-        let text = args.join(' ').replace('$userid', message.author.id).replace('server-name', message.guild.name)
-        message.channel.send(text)
-    }
-});
 //
 client.on('message', message => {
     if (message.content === "*help") {
@@ -146,6 +139,15 @@ client.on('message', message => {
     }
 
 
+});
+var prefix = "*";
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "test")) {
+
+        let args = message.content.split(" ").slice(1)
+        let text = args.join(' ').replace('$userid', message.author.id).replace('server-name', message.guild.name)
+        message.channel.send(text)
+    }
 });
 //
 var prefix = "*";
