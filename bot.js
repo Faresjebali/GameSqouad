@@ -343,7 +343,7 @@ client.on('message', message => {
            let args = message.content.split(" ").slice(1);
           if (!message.mentions.members.first()) return message.reply('')
           if (!args[1]) return message.reply('``Reason ``') 
-          if (message.guild.channels.find('name', 'warns')) { 
+          if (message.guild.channels.find('name', '🛂-global-warns')) { 
             message.guild.channels.find('name', 'warns').send(` 
           An alert was given : ${message.mentions.members.first()}
           Because you did the following
