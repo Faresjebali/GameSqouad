@@ -23,6 +23,7 @@ client.on('message', message => {
             .addField(" - ping", "Tests your ping (Correct usage: *ping)")
             .addField(" - avatar","It will get your Discord Picture")
             .addField(" -acc","Get Your Account information")
+            .addField(" -Mcskin","Shows your minecraft skin")
      .setFooter("ThaWither#1360") // sets a embed box to the var embedhelpadmin
  var embedhelpadmin = new Discord.RichEmbed()
             .setTitle("**List of Admin Commands**\n") // sets the title
@@ -308,7 +309,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : ThaWither ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setActivity("GameSquad Offical Bot")
+client.user.setActivity("GameSquad || *help")
 client.user.setStatus("online")
 });
 client.on("guildCreate", guild => {
