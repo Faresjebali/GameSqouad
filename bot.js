@@ -104,26 +104,19 @@ client.on('message', message => {
 });
 //,  , 
 client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.find('name', '🙌🏽-welcome');
-    if (!channel) return;
-    channel.send(`**Welcome**, ${member} , ** to GameSquad Server Have a Good Stay and Make sure to Invite your friends here :ok_hand:** `);
-  });
-//Welcome @Quack to Exibel I $3,500 F TOP! Make sure to Invite your friends here :ok_hand: 
-client.on('message', message => {
-                                if(!message.channel.guild) return;
-                        if (message.content.startsWith('*ping')) {
-                            if(!message.channel.guild) return;
-                            var msg = `${Date.now() - message.createdTimestamp}`
-                            var api = `${Math.round(client.ping)}`
-                            if (message.author.bot) return;
-                        let embed = new Discord.RichEmbed()
-                        .setAuthor(message.author.username,message.author.avatarURL)
-                        .setColor('RANDOM')
-                        .addField('**Time Taken:**',msg + " ms 📶 ")
-                        .addField('**WebSocket:**',api + " ms 📶 ")
-         message.channel.send({embed:embed});
-                        }
-                    });
+    var embed = new Discord.RichEmbed()
+    .setAuthor(member.user.username, member.user.avatarURL)
+    .setThumbnail(member.user.avatarURL)
+    .setTitle(`New member`)
+    .setDescription(`Welcome to the serber`)
+    .addField(' :bust_in_silhouette:  You re member number',`**[ ${member.guild.memberCount} ]**`,true)
+    .setColor('GREEN')
+    .setFooter('GameSquad', 'https://cdn.discordapp.com/avatars/452310050602745858/9024f7baf1e2c89cee49da2f97c3812e.png?size=2048')
+
+var channel =member.guild.channels.find('name', 'welcome')
+if (!channel) return;
+channel.send({embed : embed});
+});
 client.on('message',message =>{
   if (message.content === "*staffsquad") {
         message.channel.send("Well Congratz,You are Naw a part of our little Communitie But im sure with you we can Increase this and make it Bigger!, idk if u noticed but We **Gamesquad Owners** and Other Member acceepted You To be a part of our staff team , you can be the key to let tis little communitie get bigger! So at the End Wish you a good stay at GameSquad  and wish you Be the person that ill Improve this communitie :smile:,Little Note at Every Begin U will be under a Testing  For 2days To see if you desreve to be a part of staffsquad or no , Wish You Good Luck        ~regards Owners")
