@@ -399,7 +399,7 @@ client.on("roleCreate", rc => {
   });
   //By S Codes
   client.on("roleDelete",  rd => {
-  const channel = rd.guild.channels.find("name", "log")
+  const channel = rd.guild.channels.find("name", "📄-logs")
   if(channel) {
   var embed = new Discord.RichEmbed()
   .setTitle(rd.guild.name)
@@ -411,7 +411,7 @@ client.on("roleCreate", rc => {
   });
 
 client.on("channelCreate",  cc => {
-  const channel = cc.guild.channels.find("name", "log")
+  const channel = cc.guild.channels.find("name", "📄-logs")
   if(channel) {
   var embed = new Discord.RichEmbed()
   .setTitle(cc.guild.name)
@@ -423,7 +423,7 @@ client.on("channelCreate",  cc => {
   });
 
    client.on("deleteChannel",  dc => {
-  const channel = dc.guild.channels.find("name", "log")
+  const channel = dc.guild.channels.find("name", "📄-logs")
   if(channel) {
   var embed = new Discord.RichEmbed()
   .setTitle(dc.guild.name)
@@ -439,7 +439,7 @@ client.on("channelCreate",  cc => {
   client.on('messageUpdate', (message, newMessage) => {
     if (message.content === newMessage.content) return;
     if (!message || !message.id || !message.content || !message.guild || message.author.bot) return;
-    const channel = message.guild.channels.find('name', 'log');
+    const channel = message.guild.channels.find('name', '📄-logs');
     if (!channel) return;
 
     let embed = new Discord.RichEmbed()
@@ -455,7 +455,7 @@ client.on("channelCreate",  cc => {
 
 client.on('messageDelete', message => {
     if (!message || !message.id || !message.content || !message.guild || message.author.bot) return;
-    const channel = message.guild.channels.find('name', 'log');
+    const channel = message.guild.channels.find('name', '📄-logs');
     if (!channel) return;
     
     let embed = new Discord.RichEmbed()
