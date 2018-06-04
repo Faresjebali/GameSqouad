@@ -387,7 +387,7 @@ client.on("message", message => {
         }
     });
 client.on("roleCreate", rc => {
-  const channel = rc.guild.channels.find("name", "log") 
+  const channel = rc.guild.channels.find("name", "📄-logs") 
   if(channel) {
   var embed = new Discord.RichEmbed()
   .setTitle(rc.guild.name)
