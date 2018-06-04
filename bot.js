@@ -108,7 +108,7 @@ client.on('guildMemberAdd', member => {
     .setAuthor(member.user.username, member.user.avatarURL)
     .setThumbnail(member.user.avatarURL)
     .setTitle(`New member`)
-    .setDescription(`Welcome to the serber`)
+    .setDescription(`Welcome to the GameSquad`)
     .addField(' :bust_in_silhouette:  You re member number',`**[ ${member.guild.memberCount} ]**`,true)
     .setColor('GREEN')
     .setFooter('GameSquad', 'https://cdn.discordapp.com/avatars/452310050602745858/9024f7baf1e2c89cee49da2f97c3812e.png?size=2048')
