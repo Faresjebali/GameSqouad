@@ -113,7 +113,7 @@ client.on('guildMemberAdd', member => {
     .setColor('GREEN')
     .setFooter('GameSquad', 'https://cdn.discordapp.com/avatars/452310050602745858/9024f7baf1e2c89cee49da2f97c3812e.png?size=2048')
 
-var channel =member.guild.channels.find('name', 'welcome')
+var channel =member.guild.channels.find('name', '🙌🏽-welcome')
 if (!channel) return;
 channel.send({embed : embed});
 });
