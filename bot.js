@@ -455,12 +455,11 @@ client.on('messageDelete', message => {
        .setAuthor(`${message.author.tag}`, message.author.avatarURL)
        .setColor('BLACK')
        .setDescription(`🗑️ **Delete message**
-**Send it <@${message.author.id}>                                                                                                                        تم حذفها في شات** <#${message.channel.id}>\n\n \`${message.cleanContent}\``)
+**Send it <@${message.author.id}>                                                                                                                        Deleted in Chat** <#${message.channel.id}>\n\n \`${message.cleanContent}\``)
        .setTimestamp();
      channel.send({embed:embed});
 
 });
-
 
 
 
