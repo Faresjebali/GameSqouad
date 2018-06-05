@@ -163,7 +163,7 @@ client.on('message', message => {
 });
 //
 var prefix = "*"
-    if(message.content.startsWith(prefix + "stats")) {
+    if(message.content.startsWith(prefix + "server")) {
            let uptime = client.uptime;
 
     let days = 0;
