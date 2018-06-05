@@ -467,12 +467,19 @@ client.on('messageDelete', message => {
 });
 client.on("message", message => {
 
-	if (message.content.startsWith("!ping")) {
-		let startTime = Date.now();
-		message.channel.send("Ping...").then(newMessage => {
-			let endTime = Date.now();
-			newMessage.edit("Pong! Took `" + Math.round(endTime - startTime) + "ms`!");
-		});
+	if (message.content.startsWith('*ping')) {
+                            if(!message.channel.guild) return;
+                            var msg = `${Date.now() - message.createdTimestamp}`
+                            var api = `${Math.round(client.ping)}`
+                            if (message.author.bot) return;
+                        let embed = new Discord.RichEmbed()
+                        .setAuthor(message.author.username,message.author.avatarURL)
+                        .setColor('RANDOM')
+                        .addField('**Time Taken:**',msg + " ms 📶 ")
+                        .addField('**WebSocket:**',api + " ms 📶 ")
+         message.channel.send({embed:embed});
+                        }
+                    });
 	}
 
 	function log(logmessage) {
