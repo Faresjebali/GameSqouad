@@ -42,20 +42,10 @@ message.channel.send(embedhelpmember);
     }
 });
 
-client.on("guildDelete", guild => {
-    let str = "<@!Owner ID>";
-    let id = str.replace(/[<@!>]/g, '');
-    let embed = new Discord.RichEmbed()
-    .setDescription("Server Removed")
-    .setColor("#444444")
-    .setTimestamp()
-    .addField('Server', `${guild.name}`)
-    .addField('Owner', `${guild.owner.user.tag}`)
-    .setFooter(`${bot.guilds.size} Servers`);
-  
-    bot.fetchUser(id)
-    .then(user => {user.send(embed)});
-  });
+
+clientt.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', 'Member'));
+});
 //
 
 client.on('message', message => {
