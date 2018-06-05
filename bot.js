@@ -1,11 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var blacklisted = ["discord.gg", "discord.gg/", "https://discord.gg"];
-const slowmode_mentions = new Map();
-const slowmode_links = new Map();
-const slowmode_attachments = new Map();
-const ratelimit = 7500; // within 7.5 seconds
-const logChannel = "452291868865200159"
 
 
 
