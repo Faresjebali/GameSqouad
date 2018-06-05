@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('ready', () => {
     setInterval(function(){
         client.guilds.get('452242905969590283').roles.find('name', 'RainBow').edit({color: 'RANDOM'}) 
-    },12000);
+    },10000);
 });
 
 
@@ -43,9 +43,7 @@ message.channel.send(embedhelpmember);
 });
 
 
-client.on('guildMemberAdd', (member) => {
-member.addRole(member.guild.roles.find('name', 'Member'));
-});
+
 //
 
 client.on('message', message => {
