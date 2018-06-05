@@ -43,7 +43,7 @@ message.channel.send(embedhelpmember);
 });
 
 
-clientt.on('guildMemberAdd', (member) => {
+client.on('guildMemberAdd', (member) => {
 member.addRole(member.guild.roles.find('name', 'Member'));
 });
 //
