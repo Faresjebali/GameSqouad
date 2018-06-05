@@ -451,7 +451,7 @@ client.on('message',message => {
   message.channel.bulkDelete(args[0]).then(() => {
     message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
        }
-    }
+   
 });
 
 
