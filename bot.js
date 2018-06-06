@@ -79,7 +79,7 @@ client.on('message', msg => {
 client.on('message', message => {
     if (message.content === "*help") {
 let embed = new Discord.RichEmbed()   
-      .addField("** Programmer bot :wrench: **","**@ThaWither#1360   **")
+      .addField(":wrench: ** Programmer bot :wrench: **","__**@ThaWither#1360**__")
 .setColor('RANDOM')
    message.channel.sendEmbed(embed);
     }
@@ -103,7 +103,7 @@ client.on('guildMemberAdd', member => {
     .setDescription(`__**Welcome to the GameSquad**__`)
     .addField(' :bust_in_silhouette:  **You re member number**',`**[ ${member.guild.memberCount} ]**`,true)
     .setColor('GREEN')
-    .setFooter('__GameSquad__', 'https://cdn.discordapp.com/avatars/452310050602745858/9024f7baf1e2c89cee49da2f97c3812e.png?size=2048')
+    .setFooter('GameSquad', 'https://cdn.discordapp.com/avatars/452310050602745858/9024f7baf1e2c89cee49da2f97c3812e.png?size=2048')
 
 var channel =member.guild.channels.find('name', '🙌🏽-welcome')
 if (!channel) return;
