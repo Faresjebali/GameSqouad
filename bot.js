@@ -25,6 +25,7 @@ client.on('message', message => {
             .addField(" - avatar","It will get your Discord Picture")
             .addField(" -acc","Get Your Account information")
             .addField(" -member","Status of members ")
+            .addField(" -roles","See The servers Roles")
             .addField(" -Mcskin","Shows your minecraft skin")
      .setFooter("ThaWither#1360") // sets a embed box to the var embedhelpadmin
  var embedhelpadmin = new Discord.RichEmbed()
@@ -145,13 +146,18 @@ client.on('message', message => {
 
 
 });
-var prefix = "*";
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "say")) {
-
-        let args = message.content.split(" ").slice(1)
-        let text = args.join(' ').replace('$userid', message.author.id).replace('server-name', message.guild.name)
-        message.channel.send(text)
+    if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
+  
+    let command = message.content.split(" ")[0];
+    command = command.slice(prefix.length);
+  
+    let args = message.content.split(" ").slice(1);
+  
+    if (command == "say") {
+     message.channel.sendMessage(args.join("  "))
+     message.delete()
     }
 });
 //
@@ -543,7 +549,10 @@ client.on('message', message => {
 
     return;
   }
-    
+   if (cmd == "say") {
+     message.channel.sendMessage(args.join("  "))
+     message.delete()
+    } 
 
 
 });
@@ -568,7 +577,17 @@ client.on("message", async message => {
       
     };
 });
+client.on('message', message => {
+if(message.content.startsWith(prefix + 'botinfo')) {
+        const embed = new Discord.RichEmbed()
+            .setColor("#00FFFF")
+            .setDescription(`**Servers**🌐 **__${client.guilds.size}__**
+**Users**👥 **__${client.users.size}__**
+**Channels**📚 **__${client.channels.size}__** `)
+        message.channel.sendEmbed(embed);
+    }
 
+});
 
 
 
