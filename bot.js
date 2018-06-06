@@ -444,7 +444,25 @@ client.on('message', message => {
          message.channel.send({embed:embed});
                         }
                     });
-
+client.on('message', message => {
+    
+    if (message.content === "G") {
+        setInterval(function(){
+        message.edit('**✱➼**')    
+        message.edit('**✱➼ G**')    
+        message.edit('**✱➼ Ga**')
+        message.edit('**✱➼ Gam**')
+        message.edit('**✱➼ Game**')
+        message.edit('**✱➼ GameS**')
+        message.edit('**✱➼ GameSq**')
+        message.edit('**✱➼ GameSqu**')
+	message.edit('**✱➼ GameSqua**')
+	message.edit('**✱➼ GameSquad**')	
+    
+        }, 1000)
+    }
+    
+});
 
 
 
