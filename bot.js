@@ -21,6 +21,7 @@ client.on('message', message => {
             .addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
             .addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
             .addField(" - ping", "Tests your ping (Correct usage: *ping)")
+            .addField(" -Report","Report a member (correct usage : *report @person reason ")
             .addField(" - avatar","It will get your Discord Picture")
             .addField(" -acc","Get Your Account information")
             .addField(" -member","Status of members ")
