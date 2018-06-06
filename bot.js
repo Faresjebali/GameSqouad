@@ -35,7 +35,8 @@ client.on('message', message => {
             .addField(" - kick", "Kicks a desired member with a reason (Correct usage: *kick @username [reason])")
             .addField("- bc ","For Broadcast all your Server")
             .addField(" -clear","Clear Chat")  
-            .addField(" -staffsquad","Special For New Recruitments")
+            .addField(" -staffsquad","Special For New Recruitments (only owners)")
+            .addField(" -partner","Special For New Partners (only owners)")
             .setColor(0xFF0000) // sets a color
             .setFooter("Ooo, an admin!")
 message.channel.send(embedhelpmember);
@@ -112,7 +113,7 @@ channel.send({embed : embed});
 });
 client.on('message',message =>{
   if (message.content === "*staffsquad") {
-        message.channel.send("__Well Congratz__,You are Naw a part of our little Communitie But im sure with you we can Increase this and make it Bigger!, idk if u noticed but We **Gamesquad Owners** and Other Member acceepted You To be a part of our staff team , you can be the key to let tis little communitie get bigger! So at the End Wish you a good stay at GameSquad  and wish you Be the person that ill Improve this communitie :smile:,Little Note at Every Begin U will be under a Testing  For 2days To see if you desreve to be a part of staffsquad or no , Wish You Good Luck        ~regards Owners")
+        message.channel.send("**__Well Congratz__**,**You are Naw a part of our little Communitie But im sure with you we can Increase this and make it Bigger!, idk if u noticed but We **Gamesquad Owners** and Other Member acceepted You To be a part of our staff team , you can be the key to let tis little communitie get bigger! So at the End Wish you a good stay at GameSquad  and wish you Be the person that ill Improve this communitie :smile:,Little Note at Every Begin U will be under a Testing  For 2days To see if you desreve to be a part of staffsquad or no , Wish You Good Luck        ~regards Owners**")
     }
 });
   client.on('message',message =>{
