@@ -542,6 +542,27 @@ client.on('message', message => {
 
 
 });
+client.on("message", async message => {
+  var prefix = "*"
+           let args = message.content.split(' ').slice(1);
+    if(message.content.startsWith(prefix + 'giveaway')) {
+    if(!message.channel.guild) return message.channel.send('**This is only for servers**').then(m => m.delete(5000));
+    if (message.author.id !== message.guild.owner.id) {     
+    message.channel.send('**This is for the server owner only**' );
+      return;
+    }
+    const array = [];
+    message.guild.members.forEach((member) => {
+      array.push(member.user.tag);
+    });
+    const rand = array[Math.floor(Math.random() * array.length)];
+    message.channel.send(rand).then((m) => {
+      m.split('*');
+      m.edit(array);
+    });
+      
+    };
+});
 
 
 
