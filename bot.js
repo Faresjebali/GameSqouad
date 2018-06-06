@@ -116,7 +116,7 @@ client.on('message',message =>{
     }
 });
   client.on('message',message =>{
-  if (message.content === "*staffsquad") {
+  if (message.content === "*partner") {
         message.channel.send("**Greeting Young Players! By Speaking On Our @Partner systém how it works! Well Our Partner Systém in This Great Server is different and Special , The Way is work that Being a Partner at GameSquad is that mean You are A Part of It** ! __**Partner = Only part of Gamesquad Discord, Not For advertising purposes**__! Regards ~GameSquad Owners")
     }
 });
