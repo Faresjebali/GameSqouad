@@ -254,12 +254,13 @@ if(message.content.startsWith(prefix + 'info')) {
     let botembed = new Discord.RichEmbed()
     .setColor("#15f153")
     .setThumbnail(bicon)
-    .addField("Bot Name:", client.user.username)
+    .setDescription("__**GameSquad Bot**__")
+    .addField("__Bot Name:__", client.user.username)
     .addField("Created at:","**Thu May 17 2018**")
-     .addField("Server Owner:","**BarisE#5634**")
-	.addField("Server Owner:","**ThaWither#1360**")
-    .addField("Botᴰᵉᵛ:","**ThaWither#1360**" )
-    .addField("Support us:","https://www.paypal.me/ThaWither");
+     .addField("__Server Owner:__","**BarisE#5634**")
+	.addField("__Server Owner:__","**ThaWither#1360**")
+    .addField("__Botᴰᵉᵛ:__","**ThaWither#1360**" )
+    .addField("__Support us:__","https://www.paypal.me/ThaWither");
         message.channel.sendEmbed(botembed);
     }
 
@@ -446,23 +447,7 @@ client.on('message', message => {
                     });
 client.on('message', message => {
     
-    if (message.content === "G") {
-        setInterval(function(){
-        message.edit('**✱➼**')    
-        message.edit('**✱➼ G**')    
-        message.edit('**✱➼ Ga**')
-        message.edit('**✱➼ Gam**')
-        message.edit('**✱➼ Game**')
-        message.edit('**✱➼ GameS**')
-        message.edit('**✱➼ GameSq**')
-        message.edit('**✱➼ GameSqu**')
-	message.edit('**✱➼ GameSqua**')
-	message.edit('**✱➼ GameSquad**')	
     
-        }, 5000)
-    }
-    
-});
 
 
 
