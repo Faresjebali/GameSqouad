@@ -30,7 +30,7 @@ client.on('message', message => {
  var embedhelpadmin = new Discord.RichEmbed()
             .setTitle("**List of Admin Commands**\n") // sets the title
             .addField(" - say", "Makes the bot say whatever you want (Correct usage: *say [message])")
-            .addField(" - mute", "Mutes a desired member with a reason (Coorect usage: *mute @username [reason])") // sets a field
+            .addField(" - mute", "Mutes a desired member with a reason (Correct usage: *mute @username [reason])") // sets a field
             .addField(" - unmute", "Unmutes a muted player (Correct usage: *unmute @username)")
             .addField(" - kick", "Kicks a desired member with a reason (Correct usage: *kick @username [reason])")
             .addField("- bc ","For Broadcast all your Server")
