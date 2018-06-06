@@ -99,11 +99,11 @@ client.on('guildMemberAdd', member => {
     var embed = new Discord.RichEmbed()
     .setAuthor(member.user.username, member.user.avatarURL)
     .setThumbnail(member.user.avatarURL)
-    .setTitle(`New member`)
-    .setDescription(`Welcome to the GameSquad`)
-    .addField(' :bust_in_silhouette:  You re member number',`**[ ${member.guild.memberCount} ]**`,true)
+    .setTitle(`__New member__`)
+    .setDescription(`__**Welcome to the GameSquad**__`)
+    .addField(' :bust_in_silhouette:  **You re member number**',`**[ ${member.guild.memberCount} ]**`,true)
     .setColor('GREEN')
-    .setFooter('GameSquad', 'https://cdn.discordapp.com/avatars/452310050602745858/9024f7baf1e2c89cee49da2f97c3812e.png?size=2048')
+    .setFooter('__GameSquad__', 'https://cdn.discordapp.com/avatars/452310050602745858/9024f7baf1e2c89cee49da2f97c3812e.png?size=2048')
 
 var channel =member.guild.channels.find('name', '🙌🏽-welcome')
 if (!channel) return;
@@ -111,7 +111,7 @@ channel.send({embed : embed});
 });
 client.on('message',message =>{
   if (message.content === "*staffsquad") {
-        message.channel.send("Well Congratz,You are Naw a part of our little Communitie But im sure with you we can Increase this and make it Bigger!, idk if u noticed but We **Gamesquad Owners** and Other Member acceepted You To be a part of our staff team , you can be the key to let tis little communitie get bigger! So at the End Wish you a good stay at GameSquad  and wish you Be the person that ill Improve this communitie :smile:,Little Note at Every Begin U will be under a Testing  For 2days To see if you desreve to be a part of staffsquad or no , Wish You Good Luck        ~regards Owners")
+        message.channel.send("__Well Congratz__,You are Naw a part of our little Communitie But im sure with you we can Increase this and make it Bigger!, idk if u noticed but We **Gamesquad Owners** and Other Member acceepted You To be a part of our staff team , you can be the key to let tis little communitie get bigger! So at the End Wish you a good stay at GameSquad  and wish you Be the person that ill Improve this communitie :smile:,Little Note at Every Begin U will be under a Testing  For 2days To see if you desreve to be a part of staffsquad or no , Wish You Good Luck        ~regards Owners")
     }
 });
   
@@ -256,7 +256,7 @@ if(message.content.startsWith(prefix + 'info')) {
     .setThumbnail(bicon)
     .setDescription("__**GameSquad Bot**__")
     .addField("__Bot Name:__", client.user.username)
-    .addField("Created at:","**Thu May 17 2018**")
+    .addField("__Created at:__","**Thu May 17 2018**")
      .addField("__Server Owner:__","**BarisE#5634**")
 	.addField("__Server Owner:__","**ThaWither#1360**")
     .addField("__Botᴰᵉᵛ:__","**ThaWither#1360**" )
