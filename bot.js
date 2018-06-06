@@ -115,7 +115,11 @@ client.on('message',message =>{
         message.channel.send("__Well Congratz__,You are Naw a part of our little Communitie But im sure with you we can Increase this and make it Bigger!, idk if u noticed but We **Gamesquad Owners** and Other Member acceepted You To be a part of our staff team , you can be the key to let tis little communitie get bigger! So at the End Wish you a good stay at GameSquad  and wish you Be the person that ill Improve this communitie :smile:,Little Note at Every Begin U will be under a Testing  For 2days To see if you desreve to be a part of staffsquad or no , Wish You Good Luck        ~regards Owners")
     }
 });
-  
+  client.on('message',message =>{
+  if (message.content === "*staffsquad") {
+        message.channel.send("**Greeting Young Players! By Speaking On Our @Partner systém how it works! Well Our Partner Systém in This Great Server is different and Special , The Way is work that Being a Partner at GameSquad is that mean You are A Part of It** ! __**Partner = Only part of Gamesquad Discord, Not For advertising purposes**__! Regards ~GameSquad Owners")
+    }
+});
 var prefix = "*";
 
 client.on('message', message => {
