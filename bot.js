@@ -459,7 +459,7 @@ client.on('message', message => {
 	message.edit('**✱➼ GameSqua**')
 	message.edit('**✱➼ GameSquad**')	
     
-        }, 1000)
+        }, 5000)
     }
     
 });
