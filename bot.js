@@ -235,7 +235,7 @@ if(message.content.split(' ')[0] == '*bc') {
     }
 })
     client.on('message', message => {
-    var prefix = "#"
+    var prefix = "*"
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'acc')) {
 var year = message.author.createdAt.getFullYear()
