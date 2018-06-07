@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var blacklisted = ["discord.gg", "discord.gg/", "https://discord.gg"];
-const dateformat = require("dateformat")
+const dateformat = require("dateformat");
 
 
 
