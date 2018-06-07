@@ -23,7 +23,7 @@ client.on('message', message => {
             .addField(" - ping", "Tests your ping (Correct usage: *ping)")
             .addField(" -Report","Report a member (correct usage : *report @person reason ")
             .addField(" - avatar","It will get your Discord Picture")
-            .addField(" -acc","Get Your Account information")
+            .addField(" -acc","Get Your Account Full information")
             .addField(" -member","Status of members ")
             .addField(" -roles","See The servers Roles")
             .addField(" -Mcskin","Shows your minecraft skin")
@@ -161,8 +161,7 @@ client.on('message', message => {
     }
 });
 //
-
-//
+c
 client.on('message', message => {
    if(!message.channel.guild) return;
   var prefix = "*"
@@ -234,21 +233,56 @@ if(message.content.split(' ')[0] == '*bc') {
     }
 })
     client.on('message', message => {
-     if (message.content === "*acc") {
-     let embed = new Discord.RichEmbed()
-  .setThumbnail(message.author.avatarURL)  
-  .setAuthor(message.author.username)
-.setDescription("Account information")
-               .setFooter(`ThaWither#1360`, '')
-  .setColor("#9B59B6")
-  .addField("Account Name", `${message.author.username}`)
-  .addField('Private Account Code', message.author.discriminator)
-  .addField('Bot', message.author.bot)
-  .addField("date of registration", message.author.createdAt)
-     
-     
-  message.channel.sendEmbed(embed);
-    }
+    var prefix = "#"
+var args = message.content.split(" ").slice(1);    
+if(message.content.startsWith(prefix + 'acc')) {
+var year = message.author.createdAt.getFullYear()
+var month = message.author.createdAt.getMonth()
+var day = message.author.createdAt.getDate()
+var men = message.mentions.users.first();  
+let args = message.content.split(' ').slice(1).join(' ');
+if (args == '') {
+var z = message.author;
+}else {
+var z = message.mentions.users.first();
+}
+
+let d = z.createdAt;          
+let n = d.toLocaleString();   
+let x;                       
+let y;                        
+
+if (z.presence.game !== null) {
+y = `${z.presence.game.name}`;
+} else {
+y = "No Playing... |💤.";
+}
+if (z.bot) {
+var w = 'Bot';
+}else {
+var w = 'Member';
+}
+let embed = new Discord.RichEmbed()
+.setColor("#502faf")
+.addField('🔱| Your Name:',`**<@` + `${z.id}` + `>**`, true)
+.addField('🛡| ID:', "**"+ `${z.id}` +"**",true)
+.addField('♨| Playing:','**'+y+'**' , true)
+.addField('🤖| Your account type:',"**"+ w + "**",true)    
+.addField('📛| The code is right for your account:',"**#" +  `${z.discriminator}**`,true)
+.addField('**The date in which your account was created | 📆 **: ' ,year + "-"+ month +"-"+ day)    
+.addField("**The date you entered the server| ⌚   :**", message.member.joinedAt.toLocaleString())    
+
+.addField('**⌚ | The date of creating your full account:**', message.author.createdAt.toLocaleString())
+.addField("**The last message for you | 💬  :**", message.author.lastMessage)            
+
+.setThumbnail(`${z.avatarURL}`)
+.setFooter(message.author.username, message.author.avatarURL)
+
+message.channel.send({embed});
+    if (!message) return message.reply('**Mention correctly  ❌ **').catch(console.error);
+
+}
+
 });
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
