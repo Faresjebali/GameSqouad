@@ -17,6 +17,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === "*help") {
+	    message.delete()
  var embedhelpmember = new Discord.RichEmbed()    
       .setTitle("**List of Commands**\n") // sets the title to List of Commands
             .addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
@@ -40,6 +41,7 @@ client.on('message', message => {
             .addField(" -clear","Clear Chat")  
             .addField(" -staffsquad","Special For New Recruitments (only owners)")
             .addField(" -partner","Special For New Partners (only owners)")
+            .addField(" -welcome","Special Command (only owners) ")
             .setColor(0xFF0000) // sets a color
             .setFooter("Ooo, an admin!")
 message.channel.send(embedhelpmember);
@@ -118,18 +120,23 @@ channel.send({embed : embed});
 });
 client.on('message',message =>{
   if (message.content === "*staffsquad") {
+   if(message.member.roles.some(r=>["🔨StaffSquad🔨"].includes(r.name)) )
+	  message.delete()
         message.channel.send("**__Well Congratz__**,**You are Naw a part of our little Communitie But im sure with you we can Increase this and make it Bigger!, idk if u noticed but We **Gamesquad Owners** and Other Member acceepted You To be a part of our staff team , you can be the key to let tis little communitie get bigger! So at the End Wish you a good stay at GameSquad  and wish you Be the person that ill Improve this communitie :smile:,Little Note at Every Begin U will be under a Testing  For 2days To see if you desreve to be a part of staffsquad or no , Wish You Good Luck        ~regards Owners**")
+	 if(!message.member.roles.some(r=>["Owner"].includes(r.name)) ) return message.channel.send("You Dont have Perm's Soory!);
+		 
     }
 });
   client.on('message',message =>{
   if (message.content === "*partner") {
+	  message.delete()
         message.channel.send("**Greeting Young Players! By Speaking On Our @Partner systém how it works! Well Our Partner Systém in This Great Server is different and Special , The Way is work that Being a Partner at GameSquad is that mean You are A Part of It** ! __**Partner = Only part of Gamesquad Discord, Not For advertising purposes**__! Regards ~GameSquad Owners")
     }
 });
  client.on('message',message => {
 	 if(message.content ==="*welcome"){
 		 message.delete()
-		 message.channel.send("**Welcome to** __** GameSquad**__ **Player!, Discord Server Dont forget to Check out our #➕-invite-reward and to read carfuly #🔨-rules-info and check #👨-buy and #👨-sell if you are intrested :smile:           Regards ~ @owner 's **")
+		 message.channel.send("**Welcome to** __** GameSquad**__ **Player!, Discord Server Dont forget to Check out our #➕-invite-reward and to read carfuly #🔨-rules-info and check #👨-buy and #👨-sell if you are intrested :smile:           Regards @Owners **")
 				      }
 		 });
 var prefix = "*";
