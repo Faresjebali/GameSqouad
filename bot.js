@@ -625,16 +625,29 @@ if(message.content.startsWith(prefix + 'botinfo')) {
     }
 
 });
-client.on('message', message => {
-	if(message.content.startsWith(prefix + 'purge')) {
-	if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
-  if(!args[0]) return message.channel.send("Are you sure about that? :thinking: ");
-  message.channel.bulkDelete(args[0]).then(() => {
-    message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
-            };
-	};				    
-  });
+client.on('message', msg => {
+  if (msg.author.bot) return;
+  if (!msg.content.startsWith(prefix)) return;
+  let command = msg.content.split(" ")[0];
+  command = command.slice(prefix.length);
+  let args = msg.content.split(" ").slice(1);
 
+    if(command === "clear") {
+        const emoji = client.emojis.find("name", "trash")
+    let textxt = args.slice(0).join("");
+    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
+    if (textxt == "") {
+        msg.delete().then
+    msg.channel.send("***```Set the number of messages you want to delete 👌```***").then(m => m.delete(3000));
+} else {
+    msg.delete().then
+    msg.delete().then
+    msg.channel.bulkDelete(textxt);
+        msg.channel.send("```php\nNumber of messages that have been cleared: " + textxt + "\n```").then(m => m.delete(3000));
+        }    
+    }
+}
+});
 
 
 client.login('NDUyMzEwMDUwNjAyNzQ1ODU4.DfOebw.LRgLqyrjEV8BGIm24IU7_pcqCQk');
