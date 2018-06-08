@@ -126,6 +126,12 @@ client.on('message',message =>{
         message.channel.send("**Greeting Young Players! By Speaking On Our @Partner systém how it works! Well Our Partner Systém in This Great Server is different and Special , The Way is work that Being a Partner at GameSquad is that mean You are A Part of It** ! __**Partner = Only part of Gamesquad Discord, Not For advertising purposes**__! Regards ~GameSquad Owners")
     }
 });
+ client.on('message',message => {
+	 if(message.content ==="*welcome"){
+		 message.delete()
+		 message.channel.send("**Welcome to** __** GameSquad**__ **Player!, Discord Server Dont forget to Check out our #➕-invite-reward and to read carfuly #🔨-rules-info and check #👨-buy and #👨-sell if you are intrested :smile:           Regards ~ @owner 's **)
+				      }
+		 });
 var prefix = "*";
 
 client.on('message', message => {
