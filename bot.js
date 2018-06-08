@@ -46,6 +46,7 @@ message.channel.send(embedhelpmember);
       if(message.member.roles.some(r=>["🔨StaffSquad🔨"].includes(r.name)) ) return message.channel.send(embedhelpadmin);// sends the embed box "embedhelpmember" to the chatif
     }
 });
+ 
 
 
 
@@ -624,7 +625,15 @@ if(message.content.startsWith(prefix + 'botinfo')) {
     }
 
 });
-
+client.on('message', message => {
+	if(message.content.startsWith(prefix + 'purge')) {
+	if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
+  if(!args[0]) return message.channel.send("oof");
+  message.channel.bulkDelete(args[0]).then(() => {
+    message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
+            }
+	}				    
+  });
 
 
 
