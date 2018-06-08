@@ -129,7 +129,7 @@ client.on('message',message =>{
  client.on('message',message => {
 	 if(message.content ==="*welcome"){
 		 message.delete()
-		 message.channel.send("**Welcome to** __** GameSquad**__ **Player!, Discord Server Dont forget to Check out our #➕-invite-reward and to read carfuly #🔨-rules-info and check #👨-buy and #👨-sell if you are intrested :smile:           Regards ~ @owner 's **)
+		 message.channel.send("**Welcome to** __** GameSquad**__ **Player!, Discord Server Dont forget to Check out our #➕-invite-reward and to read carfuly #🔨-rules-info and check #👨-buy and #👨-sell if you are intrested :smile:           Regards ~ @owner 's **")
 				      }
 		 });
 var prefix = "*";
