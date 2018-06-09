@@ -293,7 +293,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : ThaWither ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setActivity(`Nothing`,"http://twitch.tv/S-F")// //"GameSquad || *help"
+client.user.setGame(`Nothing`,"http://twitch.tv/S-F")// //"GameSquad || *help"
 client.user.setStatus("online")
 });
 client.on("guildCreate", guild => {
