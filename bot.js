@@ -259,15 +259,7 @@ message.channel.send({embed});
 }
 
 });
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-      if(!message.member.hasPermission('ADMINISTRATOR'))
-    return message.reply(`** Prevents posting of links ! **`)
-    message.delete()
-    
-    }
-});
+
 
 client.on('message', message => {
 if(message.content.startsWith(prefix + 'info')) {
