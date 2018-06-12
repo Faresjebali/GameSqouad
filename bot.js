@@ -723,7 +723,7 @@ client.on('message', message => {
              if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
              
       message.guild.createChannel('Made By: AutoRole', 'voice')       
-      message.guild.createChannel('Made By: AutoRole 'text')
+       message.guild.createChannel('Made By : AutoRole', 'text')
       message.guild.createChannel('ðŸ‘‹-welcome', 'text')
       message.guild.createChannel('ðŸ˜¢-goodbye', 'text')
       message.guild.createChannel('ðŸ“¢-announcements', 'text')
